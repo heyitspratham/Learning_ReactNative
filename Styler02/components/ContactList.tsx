@@ -42,8 +42,11 @@ const ContactList = () => {
               }}
               style= {styles.imageCard}
             ></Image>
-            <Text style={styles.userName} >{name}</Text>
-            <Text style={styles.userStatus} >{status}</Text>
+            <View  style={styles.textArea}>
+              <Text style={styles.userName} >{name}</Text>
+              <Text style={styles.userStatus} >{status}</Text>
+            </View>
+            
           </View>
         ))}
       </ScrollView>
@@ -61,13 +64,36 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingHorizontal: 16,
+    marginHorizontal: 10,
+    marginTop: 25,
 
   },
-  userCard: {},
+  userCard: {
+    flex: 1,
+    flexDirection: 'row', 
+    alignItems: 'center',
+    marginBottom: 8,
+    padding: 8,
+    backgroundColor: '#339989',
+    borderRadius: 15,
+    
+  },
   imageCard: {
     height: 60,
     width: 60,
     borderRadius: 60/2,
-  }
+  },
+  textArea: {
+    marginHorizontal: 15,
+  },
+  userName: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#FFF'
+  },
+  userStatus: {
+    fontSize: 12
+  },
+
 
 })
